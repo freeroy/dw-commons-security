@@ -10,7 +10,7 @@
 	<artifactId>dw-commons-security</artifactId>
 	<packaging>jar</packaging>
 	<name>dw-commons-security</name>
-	<version>0.0.1</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<description>安全控制工具类库</description>
 
 	<dependencies>
