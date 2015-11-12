@@ -4,7 +4,8 @@
 	<parent>
 		<groupId>org.developerworld.commons</groupId>
 		<artifactId>dw-commons-parent</artifactId>
-		<version>0.0.2</version>
+		<version>0.0.4</version>
+		<relativePath>../dw-commons-parent/pom.xml</relativePath>
 	</parent>
 
 	<artifactId>dw-commons-security</artifactId>
@@ -24,16 +25,12 @@
 		<dependency>
 			<groupId>org.developerworld.commons</groupId>
 			<artifactId>dw-commons-servlet</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>org.developerworld.commons</groupId>
 			<artifactId>dw-commons-lang</artifactId>
-			<version>0.0.2</version>
-		</dependency>
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
+			<version>0.0.3</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
