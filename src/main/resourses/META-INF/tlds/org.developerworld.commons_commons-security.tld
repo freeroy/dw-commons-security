@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"> -->
+<!-- <!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 
+	1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd"> -->
+<taglib>
+	<tlib-version>3.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>dwCommonsSecurity</short-name>
+	<uri>http://www.developerworld.org/commons/security/taglib</uri>
+	<display-name>org.developerworld.commons.security.taglib</display-name>
+	<description></description>
+	<tag>
+		<name>xssEscape</name>
+		<tag-class>org.developerworld.commons.security.xss.tag.XSSEscapeTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>用于进行xss编码的标签</description>
+		<attribute>
+			<name>value</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>xssUnescape</name>
+		<tag-class>org.developerworld.commons.security.xss.tag.XSSUnescapeTag
+		</tag-class>
+		<body-content>JSP</body-content>
+		<description>用于进行xss反编码的标签</description>
+		<attribute>
+			<name>value</name>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<function>
+		<name>xssEscape</name>
+		<function-class>org.developerworld.commons.security.xss.XSSEscapeUtils</function-class>
+		<function-signature>java.lang.String escape(java.lang.String)</function-signature>
+		<description>xss编码过滤</description>
+		<example>
+			${dwCommonsSecurity:xssEscape(str)}
+		</example>
+	</function>
+	<function>
+		<name>xssUnescape</name>
+		<function-class>org.developerworld.commons.security.xss.XSSEscapeUtils</function-class>
+		<function-signature>java.lang.String unescape(java.lang.String)</function-signature>
+		<description>xss反编码过滤</description>
+		<example>
+			${dwCommonsSecurity:xssUnescape(str)}
+		</example>
+	</function>
+</taglib>
