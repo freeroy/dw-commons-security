@@ -64,13 +64,11 @@ public class RefererFilter extends AbstractUrlFilter {
 	public void doFilterWhenUrlPass(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
 			throws IOException, ServletException {
 		boolean pass = true;
-		String method = null;
 		String referer = null;
 		String servletPath = null;
 		try {
 			if (arg0 instanceof HttpServletRequest) {
 				HttpServletRequest request = (HttpServletRequest) arg0;
-				method = request.getMethod();
 				servletPath = request.getServletPath();
 				String domain = request.getServerName();
 				referer = request.getHeader("Referer");
@@ -96,8 +94,7 @@ public class RefererFilter extends AbstractUrlFilter {
 			else if (StringUtils.isNotBlank(redirect) && arg1 instanceof HttpServletResponse)
 				((HttpServletResponse) arg1).sendRedirect(redirect);
 			else
-				throw new ServletException("unsuport request for referer:" + referer + " and method:" + method
-						+ " to access:" + servletPath + "!");
+				throw new ServletException("unsuport request for referer:" + referer +" to access:" + servletPath + "!");
 		}
 	}
 }
